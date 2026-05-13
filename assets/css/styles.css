@@ -548,7 +548,92 @@ ul[role="list"] {
   gap: 0.65rem;
   margin-top: var(--space-4);
 }
+/* stronger interactive states for buttons + pills */
+.button,
+.hero-meta span,
+.snapshot-tags li {
+  transition:
+    transform var(--transition-base),
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base),
+    opacity var(--transition-base);
+}
 
+@media (hover: hover) {
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-primary:hover,
+  .button-primary:focus-visible {
+    color: #fffaf5;
+    background: linear-gradient(135deg, #f08a46, #cf5f1f);
+    border-color: rgba(255, 190, 145, 0.32);
+    box-shadow:
+      0 16px 34px rgba(217, 107, 43, 0.32),
+      0 0 0 1px rgba(255, 190, 145, 0.12);
+  }
+
+  .button-secondary:hover,
+  .button-secondary:focus-visible {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(217, 107, 43, 0.35);
+    box-shadow:
+      0 12px 24px rgba(0, 0, 0, 0.16),
+      0 0 0 1px rgba(217, 107, 43, 0.08);
+  }
+
+  .button-ghost:hover,
+  .button-ghost:focus-visible {
+    color: #fff3ea;
+    background: rgba(217, 107, 43, 0.14);
+    border-color: rgba(217, 107, 43, 0.38);
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.14),
+      0 0 0 1px rgba(217, 107, 43, 0.1);
+  }
+
+  .hero-meta span:hover,
+  .hero-meta span:focus-visible,
+  .snapshot-tags li:hover,
+  .snapshot-tags li:focus-visible {
+    color: var(--color-text);
+    background: rgba(217, 107, 43, 0.12);
+    border-color: rgba(217, 107, 43, 0.32);
+    box-shadow:
+      0 10px 22px rgba(0, 0, 0, 0.14),
+      0 0 0 1px rgba(217, 107, 43, 0.08);
+    transform: translateY(-1px);
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus-visible,
+  .footer-inner a:hover,
+  .footer-inner a:focus-visible,
+  .work-card a:hover,
+  .work-card a:focus-visible {
+    color: var(--color-text);
+  }
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button-primary:active {
+  background: linear-gradient(135deg, #c85a1b, #a94b14);
+}
+
+.button-secondary:active,
+.button-ghost:active,
+.hero-meta span:active,
+.snapshot-tags li:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
 .section-heading {
   display: grid;
   align-content: start;
