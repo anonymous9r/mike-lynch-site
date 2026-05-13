@@ -1,0 +1,38 @@
+# Netlify configuration for mike-lynch-site
+# Static HTML site — no build step required.
+
+[build]
+  publish = "."
+  command = ""
+
+# Pretty URLs and SPA-safe fallback (harmless for a single-page static site)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security + performance headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Long cache for static assets (safe to expand later as the site grows)
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
