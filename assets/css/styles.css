@@ -4,7 +4,25 @@
   Typography: Outfit for display + Inter for body
   Density: balanced, premium, mobile-first
 */
+.site-header.is-scrolled {
+  background: rgba(11, 11, 15, 0.88);
+  border-bottom-color: rgba(217, 107, 43, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
 
+.site-nav a.is-active {
+  color: var(--color-text);
+}
+
+.site-nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.45rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+}
 :root,
 [data-theme="light"] {
   --font-display: "Outfit", "Inter", sans-serif;
