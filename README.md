@@ -1,8 +1,8 @@
 # mike-lynch-site
 
-Personal portfolio and resume site for **Mike Lynch** — Senior Web Designer, Technical SEO Specialist, and AI Workflow Operator based in West Palm Beach, FL (fully remote).
+Personal portfolio and resume site for **Mike Lynch** — AI-first web designer, technical SEO specialist, and creative operator based in West Palm Beach, Florida.
 
-**Live site:** _Deploys to Netlify from `main`._  
+**Live site:** Deploys to Netlify from `main`  
 **Portfolio:** [9rdesigns.com](https://9rdesigns.com)  
 **LinkedIn:** [michael-lynch-08b52375](https://www.linkedin.com/in/michael-lynch-08b52375/)  
 **Contact:** [anonymouslynch@gmail.com](mailto:anonymouslynch@gmail.com)
@@ -11,74 +11,117 @@ Personal portfolio and resume site for **Mike Lynch** — Senior Web Designer, T
 
 ## About
 
-A single-page static resume + portfolio site. Hand-written HTML and CSS, no build step, no framework. Designed for fast loads, clean typography, and a layout that holds up on phones, tablets, and full desktop.
+A single-page portfolio and resume site built with plain HTML, CSS, and JavaScript. No framework, no build step, no dependency bloat.
 
-Highlights:
-- Light/dark theme toggle (respects `prefers-color-scheme`)
-- Fluid typography with `clamp()` so type scales smoothly across viewports
-- Accessible: skip-link, semantic landmarks, focus styles, reduced-motion support
-- Zero dependencies beyond Google Fonts (Instrument Serif + Work Sans)
+The site is designed to be:
+- Fast-loading
+- Fully responsive
+- Accessible
+- Easy to edit without a full dev stack
+- Strong enough visually to support both hiring and client acquisition
 
-## Tech
+---
 
-- **HTML5** — semantic markup, single `index.html`
-- **CSS** — custom properties, fluid type, theme tokens (inline in `<style>`)
-- **Vanilla JS** — ~10 lines for the theme toggle
-- **Netlify** — hosting, redirects, security headers (`netlify.toml`)
+## Features
+
+- Semantic one-page HTML structure
+- Sticky header with active section highlighting
+- Light / dark theme toggle
+- Responsive layout with fluid typography
+- Scroll reveal effects with reduced-motion support
+- Portfolio section linking to live client work
+- Netlify-ready static deployment
+
+---
+
+## Stack
+
+- **HTML5** — semantic structure in `index.html`
+- **CSS3** — custom properties, layout system, theming, motion, and responsive styles in `assets/css/styles.css`
+- **Vanilla JavaScript** — theme toggle, active nav state, scroll reveal logic in `assets/js/main.js`
+- **Netlify** — static hosting and deployment
+- **Google Fonts** — Inter + Outfit
+
+---
 
 ## Project structure
 
-```
+```text
 mike-lynch-site/
-├── index.html       # The whole site
-├── netlify.toml     # Netlify config: publish dir, redirects, headers
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── main.js
+├── netlify.toml
 └── README.md
 ```
 
+---
+
 ## Local preview
 
-No build needed. Pick one:
+No build process needed.
 
 ```bash
-# Option 1: open the file directly
-open index.html
-
-# Option 2: serve with Python
+# Option 1
 python3 -m http.server 8000
-# then visit http://localhost:8000
 
-# Option 3: Netlify CLI (matches production headers/redirects)
+# then visit
+http://localhost:8000
+```
+
+You can also use Netlify CLI if you want to mirror deployment behavior more closely:
+
+```bash
 npx netlify dev
 ```
 
+---
+
 ## Deploy to Netlify
 
-1. Go to [app.netlify.com](https://app.netlify.com) → Add new site → Import from Git
-2. Authorize GitHub and select `anonymous9r/mike-lynch-site`
-3. Build settings auto-detect from `netlify.toml`:
-   - Build command: (none)
-   - Publish directory: `.`
-4. Click Deploy — first build takes ~30 seconds
+1. Go to [Netlify](https://app.netlify.com/)
+2. Click **Add new site** → **Import from Git**
+3. Connect GitHub
+4. Select `anonymous9r/mike-lynch-site`
+5. Confirm settings:
+   - **Build command:** none
+   - **Publish directory:** `.`
+6. Deploy
 
-Every push to `main` triggers a new deploy automatically.
+Every push to `main` triggers a fresh deploy automatically. Static sites without preprocessors can use a blank build command and a root publish directory. [web:230][web:233]
 
-### Custom domain
+---
 
-In Netlify: Site settings → Domain management → Add custom domain. Netlify provisions a free Let's Encrypt SSL certificate.
+## Editing guide
 
-## Editing content
+Common content locations:
 
-All copy lives in `index.html`. Common edits:
-
-| What to change | Where |
+| Change | File / section |
 |---|---|
-| Headline + lead paragraph | `<section class="hero">` |
-| Job history | `<div class="timeline">` |
-| Portfolio cards | `<div class="portfolio-grid">` |
-| Skills | `<div class="skills">` |
-| Contact info | Footer + header `mailto:` links |
-| Theme colors | `:root` and `[data-theme="dark"]` CSS variables |
+| Hero headline and intro | `index.html` → `#hero` |
+| About copy | `index.html` → `#about` |
+| Experience timeline | `index.html` → `#experience` |
+| Work cards | `index.html` → `#work` |
+| Skills and stack | `index.html` → `#skills` |
+| AI workflow copy | `index.html` → `#workflow` |
+| Contact CTA | `index.html` → `#contact` |
+| Theme colors, spacing, type, hover styles | `assets/css/styles.css` |
+| Theme toggle, reveal logic, active nav behavior | `assets/js/main.js` |
+
+---
+
+## Notes
+
+- This site is intentionally framework-free so it stays easy to maintain.
+- Motion should remain restrained and always respect reduced-motion preferences.
+- Live portfolio links should point only to real client work, not placeholders.
+
+---
 
 ## License
 
-Content (resume copy, project descriptions) © Mike Lynch. The HTML/CSS scaffolding is free to reuse with attribution.
+Resume content, brand copy, and project descriptions © Mike Lynch.  
+Code scaffolding may be reused with attribution unless otherwise noted.
