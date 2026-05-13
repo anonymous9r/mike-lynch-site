@@ -6,7 +6,74 @@
   const sections = document.querySelectorAll("main section[id]");
   const header = document.querySelector(".site-header");
   const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const experienceSteps = document.querySelectorAll("[data-step]");
+  const experienceKicker = document.querySelector("[data-exp-kicker]");
+  const experienceTitle = document.querySelector("[data-exp-title]");
+  const experienceRange = document.querySelector("[data-exp-range]");
+  const experienceCopy = document.querySelector("[data-exp-copy]");
+  const experiencePoints = document.querySelector("[data-exp-points]");
+  const experienceDisplay = document.querySelector(".experience-display");
+  const progressLine = document.querySelector(".experience-progress-line");
 
+  const updateExperienceDisplay = (step) => {
+    if (
+      !step ||
+      !experienceKicker ||
+      !experienceTitle ||
+      !experienceRange ||
+      !experienceCopy ||
+      !experiencePoints ||
+      !experienceDisplay
+    ) return;
+
+    const kicker = step.dataset.kicker || "";
+    const title = step.dataset.title || "";
+    const range = step.dataset.range || "";
+    const copy = step.dataset.copy || "";
+    let points = [];
+
+    try {
+      points = JSON.parse(step.dataset.points || "[]");
+    } catch (error) {
+      points = [];
+    }
+
+    experienceDisplay.classList.remove("is-transitioning");
+    void experienceDisplay.offsetWidth;
+    experienceDisplay.classList.add("is-transitioning");
+
+    experienceKicker.textContent = kicker;
+    experienceTitle.textContent = title;
+    experienceRange.textContent = range;
+    experienceCopy.textContent = copy;
+
+    experiencePoints.innerHTML = points
+      .map((point) => `<li>${point}</li>`)
+      .join("");
+
+    window.setTimeout(() => {
+      experienceDisplay.classList.remove("is-transitioning");
+    }, 380);
+  };
+
+  const updateExperienceProgress = (activeIndex) => {
+    if (!progressLine || !experienceSteps.length) return;
+    const percent = ((activeIndex + 1) / experienceSteps.length) * 100;
+    progressLine.style.height = `${percent}%`;
+  };
+
+  const setActiveExperienceStep = (step) => {
+    if (!step) return;
+
+    experienceSteps.forEach((item, index) => {
+      const isActive = item === step;
+      item.classList.toggle("is-active", isActive);
+      if (isActive) {
+        updateExperienceDisplay(item);
+        updateExperienceProgress(index);
+      }
+    });
+  };
   let currentTheme = root.getAttribute("data-theme");
 
   if (!currentTheme) {
@@ -114,5 +181,29 @@
     setActiveNav(initialHash);
   } else if (sections[0]?.id) {
     setActiveNav(sections[0].id);
+      if ("IntersectionObserver" in window && experienceSteps.length) {
+    const experienceObserver = new IntersectionObserver(
+      (entries) => {
+        const visibleStep = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleStep?.target) {
+          setActiveExperienceStep(visibleStep.target);
+        }
+      },
+      {
+        threshold: [0.3, 0.55, 0.8],
+        rootMargin: "-20% 0px -35% 0px"
+      }
+    );
+
+    experienceSteps.forEach((step) => experienceObserver.observe(step));
+
+    const initiallyActive = document.querySelector(".experience-step.is-active") || experienceSteps[0];
+    if (initiallyActive) {
+      setActiveExperienceStep(initiallyActive);
+    }
+  }
   }
 })();
