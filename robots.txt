@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /resume.html
+
+Sitemap: https://mikelynch-resume.netlify.app/sitemap.xml

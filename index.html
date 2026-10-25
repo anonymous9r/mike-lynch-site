@@ -3,41 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mike Lynch | AI-First Web Designer, SEO Strategist & Creative Operator</title>
+  <title>Mike Lynch | SEO &amp; E-commerce Growth Strategist · AI Systems</title>
   <meta
     name="description"
-    content="Mike Lynch is a West Palm Beach-based AI-first web designer, SEO strategist, and creative operator building fast, premium sites and search systems for brands that need real results."
+    content="Mike Lynch is an SEO and e-commerce growth strategist who designs, builds, and measures the sites, stores, and AI-assisted systems that turn search visibility into customers. Case studies with real Search Console data."
   />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0c0c0f" />
-
+  <meta name="theme-color" content="#0b0b0f" />
   <link rel="canonical" href="https://mikelynch-resume.netlify.app/" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mike Lynch | AI-First Web Designer, SEO Strategist & Creative Operator" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Mike Lynch | SEO &amp; E-commerce Growth Strategist · AI Systems" />
   <meta
     property="og:description"
-    content="Portfolio and resume site for Mike Lynch — founder of 9R Designs and SEO Tier 1, focused on AI-first web design, technical SEO, UX, and modern digital systems."
+    content="Case studies, real Search Console numbers, and the systems behind them: local SEO, Shopify migration, childcare enrollment sites, and AI-assisted workflows with human review."
   />
   <meta property="og:url" content="https://mikelynch-resume.netlify.app/" />
+  <meta property="og:image" content="https://mikelynch-resume.netlify.app/assets/img/og.png" />
   <meta property="og:site_name" content="Mike Lynch" />
-
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mike Lynch | AI-First Web Designer, SEO Strategist & Creative Operator" />
-  <meta
-    name="twitter:description"
-    content="AI-first portfolio and resume for Mike Lynch — web design, SEO, UX, content systems, and digital execution."
-  />
+  <meta name="twitter:title" content="Mike Lynch | SEO &amp; E-commerce Growth Strategist · AI Systems" />
+  <meta name="twitter:description" content="Proof-first portfolio: case studies, real Search Console numbers, and the systems behind them." />
+  <meta name="twitter:image" content="https://mikelynch-resume.netlify.app/assets/img/og.png" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("ml-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
     rel="stylesheet"
   />
-
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <script defer src="assets/js/main.js?v=2"></script>
 
   <script type="application/ld+json">
   {
@@ -45,386 +53,665 @@
     "@graph": [
       {
         "@type": "Person",
+        "@id": "https://mikelynch-resume.netlify.app/#mike",
         "name": "Mike Lynch",
-        "jobTitle": "AI-First Web Designer, SEO Strategist, and Creative Operator",
+        "jobTitle": "SEO & E-commerce Growth Strategist",
+        "description": "SEO, AEO/GEO, e-commerce growth, web design, and AI-assisted workflow systems.",
+        "email": "mailto:anonymouslynch@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "West Palm Beach",
           "addressRegion": "FL",
           "addressCountry": "US"
         },
+        "knowsAbout": ["Technical SEO", "Local SEO", "Answer Engine Optimization", "Generative Engine Optimization", "E-commerce", "Shopify", "Conversion rate optimization", "Web design", "AI workflow automation"],
         "worksFor": [
-          { "@type": "Organization", "name": "9R Designs" },
-          { "@type": "Organization", "name": "SEO Tier 1" }
+          { "@type": "Organization", "name": "9R Designs", "url": "https://9rdesigns.com/" },
+          { "@type": "Organization", "name": "SEO Tier 1", "url": "https://seotier1.com/" }
         ],
         "url": "https://mikelynch-resume.netlify.app/",
         "sameAs": [
           "https://9rdesigns.com/",
-          "https://www.linkedin.com/in/michael-lynch-08b52375"
+          "https://www.linkedin.com/in/michael-lynch-08b52375",
+          "https://github.com/anonymous9r"
         ]
       },
       {
-        "@type": "WebSite",
-        "name": "Mike Lynch",
-        "url": "https://mikelynch-resume.netlify.app/"
+        "@type": "ProfilePage",
+        "url": "https://mikelynch-resume.netlify.app/",
+        "name": "Mike Lynch — Portfolio and Résumé",
+        "mainEntity": { "@id": "https://mikelynch-resume.netlify.app/#mike" }
       }
     ]
   }
   </script>
 </head>
-<body>
+<body data-lens="all">
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <div class="site-shell">
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a class="brand" href="#hero" aria-label="Mike Lynch home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
-              <path d="M14 48V16h8l10 16 10-16h8v32h-8V29.5L34 42h-4L22 29.5V48z" fill="currentColor"></path>
-            </svg>
-          </span>
-          <span class="brand-text">Mike Lynch</span>
-        </a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Mike Lynch, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M14 48V16h8l10 16 10-16h8v32h-8V29.5L34 42h-4L22 29.5V48z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-text">Mike Lynch</span>
+      </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#work">Work</a>
-          <a href="#workflow">AI Workflow</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#proof">Proof</a>
+        <a href="#work">Case studies</a>
+        <a href="#systems">Systems</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-        <div class="header-actions">
-          <button
-            class="theme-toggle"
-            type="button"
-            data-theme-toggle
-            aria-label="Switch color theme"
-          >
-            <span class="theme-toggle-dot" aria-hidden="true"></span>
-          </button>
-          <a class="button button-primary" href="#contact">Let’s Build</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+        </button>
+        <a class="button button-primary button-sm" href="assets/Mike-Lynch-Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow" data-motion="rise-sm"><span class="status-dot" aria-hidden="true"></span>Open to senior remote roles · SEO · E-commerce · AI strategy</p>
+          <h1 id="hero-title" data-motion="rise">
+            I turn search visibility into <span class="accent-text">customers</span>, then build the systems that keep it running.
+          </h1>
+
+          <div class="lens" data-motion="rise-sm">
+            <p class="lens-label" id="lens-label">Show me the work through the lens of</p>
+            <div class="lens-switch" role="radiogroup" aria-labelledby="lens-label">
+              <button type="button" role="radio" aria-checked="true" data-lens-btn="all">Everything</button>
+              <button type="button" role="radio" aria-checked="false" data-lens-btn="seo">SEO &amp; AEO</button>
+              <button type="button" role="radio" aria-checked="false" data-lens-btn="ecom">E-commerce</button>
+              <button type="button" role="radio" aria-checked="false" data-lens-btn="ai">AI &amp; systems</button>
+            </div>
+            <div class="lens-copy" aria-live="polite">
+              <p data-lens-copy="all">SEO and e-commerce growth strategist. Seven years inside Greenlane’s multi-brand e-commerce portfolio, then a year running my own studio: shipping and ranking sites for an electrician, a chopper shop, three preschools, a childcare brokerage, a welder, and an artist. I design the experience, direct the build, and prove it in Search Console.</p>
+              <p data-lens-copy="seo" hidden>Technical, local, and AI-search (AEO/GEO) work built on Google Search Central fundamentals: crawlable HTML, clean canonicals, real schema, intent-mapped pages. Then I go back to Search Console and check whether it worked.</p>
+              <p data-lens-copy="ecom" hidden>Catalog, merchandising, and conversion work across Vapor.com, Higher Standards, and Puff It Up, plus a 1,445-order, 366-product BigCartel-to-Shopify migration built so a wrong SKU never gets through.</p>
+              <p data-lens-copy="ai" hidden>AI orchestration that holds up in production: deterministic Python transforms, QA gates, server-side secrets, and draft-only reporting. AI handles the repetitive work, and nothing goes to a client until I’ve checked it.</p>
+            </div>
+          </div>
+
+          <div class="hero-cta" data-motion="rise-sm">
+            <a class="button button-primary" href="#work">See the case studies</a>
+            <a class="button button-secondary" href="assets/Mike-Lynch-Resume.pdf" download>Download résumé</a>
+            <a class="button button-ghost" href="mailto:anonymouslynch@gmail.com">anonymouslynch@gmail.com</a>
+          </div>
+        </div>
+
+        <aside class="hero-console" aria-label="Live proof snapshot" data-motion="right" data-motion-delay="2">
+          <div class="console-bar">
+            <span class="console-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="console-title">search-console · tfw-electric.com</span>
+          </div>
+          <div class="console-body">
+            <p class="console-meta">Query · avg. position · Jul 9 – Oct 22, 2026</p>
+            <ul class="rank-list" role="list">
+              <li><span class="q">best electricians for panel upgrades in gwinnett county</span><span class="pos" data-pos="2.4">2.4</span></li>
+              <li><span class="q">electrical contractor gwinnett county ga</span><span class="pos" data-pos="3.2">3.2</span></li>
+              <li><span class="q">electrician gwinnett county</span><span class="pos" data-pos="4.2">4.2</span></li>
+              <li><span class="q">electrician gwinnett county ga</span><span class="pos" data-pos="4.8">4.8</span></li>
+              <li><span class="q">gwinnett electrician</span><span class="pos" data-pos="7.6">7.6</span></li>
+            </ul>
+            <p class="console-foot">A brand-new site on page one for county-level money terms within about 100 days of indexing. <a href="#case-tfw">How I got there →</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="section proof" id="proof" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="section-heading" data-motion="rise-sm">
+          <p class="eyebrow">Proof, with receipts</p>
+          <h2 id="proof-title">Numbers I can back up, with the source listed under each one.</h2>
+        </div>
+
+        <div class="proof-grid" data-motion-group>
+          <article class="proof-card" data-motion="rise" data-lens-tags="ecom seo">
+            <p class="proof-num">1% → 3%</p>
+            <p class="proof-label">Conversion rate across Greenlane brand sites in about three months</p>
+            <p class="proof-src">Greenlane Holdings · Vapor.com, Higher Standards, Puff It Up and more · 2023–2025</p>
+          </article>
+          <article class="proof-card" data-motion="rise" data-lens-tags="ecom seo">
+            <p class="proof-num">92 → <span data-count-to="364">364</span></p>
+            <p class="proof-label">Monthly Google clicks for Gatti’s Garage, April → July 2026 (about 4×)</p>
+            <p class="proof-src">Google Search Console · gattisgarage.com</p>
+          </article>
+          <article class="proof-card" data-motion="rise" data-lens-tags="seo">
+            <p class="proof-num"><span data-count-to="65804">65,804</span></p>
+            <p class="proof-label">Google impressions across four First Impressions campuses (1,592 clicks)</p>
+            <p class="proof-src">Google Search Console · Jan 22 – Oct 22, 2026</p>
+          </article>
+          <article class="proof-card" data-motion="rise" data-lens-tags="seo ai">
+            <p class="proof-num">50% → full</p>
+            <p class="proof-label">Academy of Little Achievers enrollment after calls spiked in May</p>
+            <p class="proof-src">Owner-reported outcome, not an attributed metric</p>
+          </article>
+          <article class="proof-card" data-motion="rise" data-lens-tags="ecom ai">
+            <p class="proof-num">0 mismatches</p>
+            <p class="proof-label">Across 861 orders and 1,317 line items in the final Shopify migration batch</p>
+            <p class="proof-src">Deterministic Python QA · Gatti’s Garage migration</p>
+          </article>
+          <article class="proof-card" data-motion="rise" data-lens-tags="seo ai">
+            <p class="proof-num">2.1</p>
+            <p class="proof-label">Avg. position for “daycare near me” on the rebuilt Rockledge preschool site</p>
+            <p class="proof-src">Google Search Console · Jul 22 – Oct 22, 2026</p>
+          </article>
+        </div>
+        <p class="fine-print" data-motion="fade">Search Console numbers were pulled directly from the properties I manage. Positions are impression-weighted averages, and branded and non-branded queries are mixed unless I say otherwise. Greenlane figures come from my time on the team, not a public report.</p>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="section section-alt" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading split" data-motion="rise-sm">
+          <div>
+            <p class="eyebrow">Case studies</p>
+            <h2 id="work-title">Real businesses. Each one shows the problem, my role, what I decided, and what happened.</h2>
+          </div>
+          <p class="section-intro">Every build is designed around the trade it serves. A welder’s site shouldn’t feel like a preschool’s, and a brokerage shouldn’t feel like a chopper shop.</p>
+        </div>
+
+        <div class="cases" data-lens-sortable>
+
+          <!-- TFW -->
+          <article class="case" id="case-tfw" data-order-all="1" data-order-seo="1" data-order-ecom="5" data-order-ai="4" data-motion="rise">
+            <div class="case-media">
+              <figure class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>tfw-electric.com</span></div>
+                <img src="assets/img/work/tfw.webp" width="1200" height="750" loading="lazy" alt="TFW Electric homepage: Licensed Electrician in Lawrenceville and Gwinnett County, GA, with a call-for-estimate button" />
+              </figure>
+            </div>
+            <div class="case-body">
+              <p class="case-kicker"><span class="case-num">01</span> Local SEO · Home services · Lawrenceville, GA</p>
+              <h3>TFW Electric: from a hidden noindex to page one in Gwinnett County</h3>
+              <dl class="case-facts">
+                <div><dt>Problem</dt><dd>A new electrician site that Google kept reporting as <code>noindex</code>, even though the source code was clean. The robots tag was being changed in JavaScript after the page loaded, and www and non-www versions were competing as canonicals.</dd></div>
+                <div><dt>My role</dt><dd>Strategy, SEO architecture, schema, copy direction, and Search Console. Built in Figma Make.</dd></div>
+                <div><dt>Decisions</dt><dd>Fixed the raw HTML head (Google reads that before any JavaScript), consolidated on one canonical host, and added Electrician / LocalBusiness schema with the Georgia license and a full service list. Wrote service copy targeting the county, not just the city.</dd></div>
+              </dl>
+              <div class="case-result">
+                <span class="result-chip">Avg. pos. 4.2 · “electrician gwinnett county”</span>
+                <span class="result-chip">3.2 · “electrical contractor gwinnett county ga”</span>
+                <span class="result-chip">1,345 impressions in ~100 days</span>
+              </div>
+              <p class="case-touch"><strong>Built for the trade:</strong> a call-first layout with the phone number and license up front, because homeowners with a dead panel call and don’t browse.</p>
+              <div class="case-actions">
+                <button class="button button-secondary button-sm" type="button" data-drawer-open="drawer-tfw">Open the case file</button>
+                <a class="text-link" href="https://tfw-electric.com/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GATTIS -->
+          <article class="case case-wide" id="case-gattis" data-order-all="2" data-order-seo="3" data-order-ecom="1" data-order-ai="1" data-motion="rise">
+            <div class="case-body">
+              <p class="case-kicker"><span class="case-num">02</span> E-commerce · Migration · Lake Worth Beach, FL</p>
+              <h3>Gatti’s Garage: brand site, live store, and a Shopify migration in progress</h3>
+              <p class="case-lede">Gatti’s builds custom choppers and bobbers and sells parts. Right now the business runs on two connected surfaces, and I’m building the third. Toggle between the current setup and the planned one:</p>
+
+              <div class="arch" data-arch>
+                <div class="arch-toggle" role="tablist" aria-label="Gatti’s Garage architecture">
+                  <button type="button" role="tab" aria-selected="true" aria-controls="arch-now" id="arch-tab-now" data-arch-tab="now">Live today</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="arch-next" id="arch-tab-next" data-arch-tab="next">Shopify (in progress)</button>
+                </div>
+
+                <div class="arch-panel" id="arch-now" role="tabpanel" aria-labelledby="arch-tab-now">
+                  <ol class="flow" role="list">
+                    <li class="flow-node"><span class="node-tag">Discovery</span><strong>Google · Maps · social</strong><small>“gattis garage” ranks at avg. position 1.4</small></li>
+                    <li class="flow-node node-accent"><span class="node-tag">Brand + SEO layer</span><strong>gattisgarage.com</strong><small>Figma Make site I designed: custom builds, repair, Services hub, the “Built to Be Ridden” editorial feature, schema, and sitemap</small></li>
+                    <li class="flow-node"><span class="node-tag">Commerce layer</span><strong>BigCartel storefront</strong><small>“Shop” hands buyers off to live checkout. BigCartel is the source of truth for products, SKUs, and prices</small></li>
+                    <li class="flow-node"><span class="node-tag">Fulfillment</span><strong>Orders → shop</strong><small>About 1,445 historical orders totaling $195,686.45</small></li>
+                  </ol>
+                  <p class="arch-note">Why two platforms? The brand site gives me full control over design and SEO, while BigCartel keeps checkout running without interruption. The cost is a split customer journey, which is why the Shopify move is happening.</p>
+                </div>
+
+                <div class="arch-panel" id="arch-next" role="tabpanel" aria-labelledby="arch-tab-next" hidden>
+                  <ol class="flow" role="list">
+                    <li class="flow-node"><span class="node-tag">Source exports</span><strong>BigCartel orders, customers, catalog</strong><small>Validated first. A two-byte blank export was caught and rejected</small></li>
+                    <li class="flow-node node-accent"><span class="node-tag">Deterministic transform</span><strong>Python, rerunnable, no AI credits</strong><small>1,445 orders → 7,020 Matrixify rows; 366-product master with 1,925 rows and 57 columns</small></li>
+                    <li class="flow-node"><span class="node-tag">QA gates</span><strong>Zero mismatches before import</strong><small>Notifications off, inventory bypassed, uncertain SKUs left blank and tagged for review</small></li>
+                    <li class="flow-node"><span class="node-tag">Destination</span><strong>Custom Shopify theme</strong><small>Shop by Bike / Shop by Part, a microfiche-style parts navigator, TaxJar, and 10 verified redirects</small></li>
+                  </ol>
+                  <p class="arch-note">Status: catalog, history, and theme are staged. Launch waits on the owner’s final inventory sign-off and DNS cutover. The rule I built it on: <strong>leaving a SKU link blank is better than linking the wrong one.</strong></p>
+                </div>
+              </div>
+
+              <div class="case-result">
+                <span class="result-chip">92 → 364 monthly Google clicks (Apr → Jul 2026)</span>
+                <span class="result-chip">Up to 96% month-over-month revenue growth on the store</span>
+              </div>
+              <div class="case-actions">
+                <button class="button button-secondary button-sm" type="button" data-drawer-open="drawer-gattis">Open the case file</button>
+                <a class="text-link" href="https://gattisgarage.com/" target="_blank" rel="noopener noreferrer">Visit brand site ↗</a>
+                <a class="text-link" href="https://gattisgarage.bigcartel.com/" target="_blank" rel="noopener noreferrer">Current store ↗</a>
+              </div>
+            </div>
+            <div class="case-media stack">
+              <figure class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>gattisgarage.com</span></div>
+                <img src="assets/img/work/gattis.webp" width="1200" height="750" loading="lazy" alt="Gatti’s Garage homepage: Custom Motorcycle Builds and Repair in Lake Worth, Florida, with a Shop Parts on BigCartel button" />
+              </figure>
+              <figure class="browser browser-offset">
+                <div class="browser-bar"><i></i><i></i><i></i><span>gattisgarage.com/built-to-be-ridden</span></div>
+                <img src="assets/img/work/gattis-btbr.webp" width="1200" height="750" loading="lazy" alt="Built to Be Ridden editorial feature page on the Gatti’s Garage site" />
+              </figure>
+            </div>
+          </article>
+
+          <!-- CHILDCARE -->
+          <article class="case case-wide" id="case-childcare" data-order-all="3" data-order-seo="2" data-order-ecom="4" data-order-ai="3" data-motion="rise">
+            <div class="case-media">
+              <div class="compare" data-compare style="--pos: 50%">
+                <img class="compare-a" src="assets/img/work/ala.webp" width="1200" height="750" loading="lazy" alt="Academy of Little Achievers homepage in English" />
+                <img class="compare-b" src="assets/img/work/ala-es.webp" width="1200" height="750" loading="lazy" alt="Academy of Little Achievers homepage in Spanish: Academia de Pequeños Logros" />
+                <span class="compare-label left">English</span>
+                <span class="compare-label right">Español</span>
+                <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the English and Spanish versions" />
+                <span class="compare-handle" aria-hidden="true"></span>
+              </div>
+              <p class="media-caption">Drag the handle. The full site switches between English and Spanish, not just the hero, and the two-school split design carries through both versions.</p>
+            </div>
+            <div class="case-body">
+              <p class="case-kicker"><span class="case-num">03</span> Childcare · Local SEO · Enrollment systems · FL</p>
+              <h3>Three preschool sites, seven campuses, two languages, one playbook</h3>
+              <ul class="mini-cases" role="list">
+                <li>
+                  <h4>Academy of Little Achievers <span>Port Charlotte + St. Petersburg</span></h4>
+                  <p>Immersive bilingual (EN/ES) site with a split hero for two schools. Used Search Console to choose priorities: the Port Charlotte page had 523 impressions and 1 click, so it was rebuilt first, followed by a round of title and meta rewrites aimed at CTR.</p>
+                  <p class="mini-result">18,902 impressions since Apr 22 · owner reports enrollment went from about 50% to full licensed capacity</p>
+                </li>
+                <li>
+                  <h4>First Impressions Schools <span>4 Palm Beach County campuses</span></h4>
+                  <p>Free VPK landing page, an admissions-age correction carried through copy, schema, and forms, and lead reporting that shows the client aggregated Supabase views while raw parent data stays internal.</p>
+                  <p class="mini-result">65,804 impressions · 1,592 clicks · “first impressions of lake worth” at avg. position 1.0</p>
+                </li>
+                <li>
+                  <h4>First Impressions of Rockledge <span>Full rebuild, Brevard County</span></h4>
+                  <p>Cut the domain over to Figma Sites without touching mail records. Found the lost-lead bug: the tour button pointed to a <code>mailto:</code>, not the CRM form. Added attribution fields, GA4 lead events, and a Python/Gemini image-SEO pipeline.</p>
+                  <p class="mini-result">“daycare near me” at avg. position 2.1 · first-month baseline showed organic at 68% engagement vs. 6% for paid social. I reported that to the client rather than leaving it out</p>
+                </li>
+              </ul>
+              <p class="case-touch"><strong>Built for the trade:</strong> warm palettes, colored-pencil imagery, and parent-trust details like ratios, keyless entry, and licensing shown up front. Parents are deciding who they trust with their kid, not comparing specs.</p>
+              <div class="case-actions">
+                <button class="button button-secondary button-sm" type="button" data-drawer-open="drawer-childcare">Open the case file</button>
+                <a class="text-link" href="https://academylittleachievers.com/" target="_blank" rel="noopener noreferrer">ALA ↗</a>
+                <a class="text-link" href="https://www.firstimpressionsschools.com/" target="_blank" rel="noopener noreferrer">First Impressions ↗</a>
+                <a class="text-link" href="https://firstimpressionspreschool.com/" target="_blank" rel="noopener noreferrer">Rockledge ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9R -->
+          <article class="case" id="case-9r" data-order-all="4" data-order-seo="4" data-order-ecom="3" data-order-ai="2" data-motion="rise">
+            <div class="case-media">
+              <div class="compare" data-compare style="--pos: 50%">
+                <img class="compare-a" src="assets/img/work/9r.webp" width="1200" height="750" loading="lazy" alt="9R Designs homepage in light theme" />
+                <img class="compare-b" src="assets/img/work/9r-dark.webp" width="1200" height="750" loading="lazy" alt="9R Designs homepage in dark theme" />
+                <span class="compare-label left">Light</span>
+                <span class="compare-label right">Dark</span>
+                <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the light and dark themes" />
+                <span class="compare-handle" aria-hidden="true"></span>
+              </div>
+              <p class="media-caption">The same page in light and dark themes. Toggle the theme on this site (top right) to try one.</p>
+            </div>
+            <div class="case-body">
+              <p class="case-kicker"><span class="case-num">04</span> Studio site · Motion design · West Palm Beach</p>
+              <h3>9R Designs: my studio site is also where I test motion and interaction</h3>
+              <dl class="case-facts">
+                <div><dt>What’s in it</dt><dd>An “Eclipse” theme toggle (system / light / dark), a radial dome navigation, a custom cursor with spring physics, a canvas film-grain overlay, and Audit Lite, a site-check tool with separate business-owner and operator views.</dd></div>
+                <div><dt>How it’s built</dt><dd>Designed in Figma, migrated to Vite + React + Motion, deployed on Vercel through GitHub. Every animation respects <code>prefers-reduced-motion</code>.</dd></div>
+                <div><dt>Why it matters</dt><dd>Clients hire the studio based on how this site feels to use, so it has to show the craft.</dd></div>
+              </dl>
+              <div class="case-actions">
+                <a class="button button-secondary button-sm" href="https://9rdesigns.com/" target="_blank" rel="noopener noreferrer">Explore 9rdesigns.com ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRE-LAUNCH -->
+          <article class="case case-trio" id="case-next" data-order-all="5" data-order-seo="5" data-order-ecom="2" data-order-ai="5" data-motion="rise">
+            <div class="case-body full">
+              <p class="case-kicker"><span class="case-num">05</span> Launching next · Each one designed around its industry</p>
+              <h3>A brokerage, a boiler welder, and an artist, each with its own design system</h3>
+            </div>
+            <div class="trio">
+              <div class="trio-card">
+                <figure class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i><span>childcaresales.com · preview</span></div>
+                  <img src="assets/img/work/sip.webp" width="1200" height="750" loading="lazy" alt="School Investment Properties preview: Specialized Childcare Business Brokers for Preschools, Private Schools and Early Education Centers" />
+                </figure>
+                <span class="badge">Pre-launch</span>
+                <h4>School Investment Properties</h4>
+                <p>Seller-first rebuild for a childcare business brokerage founded in 1987. I worked there from 2011 to 2014, so I know who visits the site: owners quietly exploring a sale. The office maintains listings in a Google Sheet that feeds the site directly (40 live records), and confidential school identities never leave the office.</p>
+                <p class="case-touch"><strong>Built for the trade:</strong> discretion is the design. One clear call to action, “Get a Confidential Valuation.”</p>
+              </div>
+              <div class="trio-card">
+                <figure class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i><span>blackieswelding.com · preview</span></div>
+                  <img src="assets/img/work/blackies.webp" width="1200" height="750" loading="lazy" alt="Blackie’s Welding and Boiler Service preview: Boiler, pressure-vessel, and pipe welding for facilities that can’t afford downtime" />
+                </figure>
+                <span class="badge">Pre-launch</span>
+                <h4>Blackie’s Welding &amp; Boiler Service</h4>
+                <p>Next.js + TypeScript build for an industrial welding shop in Hallandale Beach. Every certification and compliance claim is tracked as approved, pending, or blocked, so nothing unverified goes on a facilities manager’s screen.</p>
+                <p class="case-touch"><strong>Built for the trade:</strong> a fabricated-steel visual system, a diamond-plate hero, a structural steel rail, and a heat glow that follows your cursor.</p>
+              </div>
+              <div class="trio-card">
+                <figure class="browser">
+                  <div class="browser-bar"><i></i><i></i><i></i><span>jasminesoleicreations.com</span></div>
+                  <img src="assets/img/work/jasmine.webp" width="1200" height="750" loading="lazy" alt="Jasmine Solei homepage: Guided Creative Experiences for Reflection, Connection, and Exploration" />
+                </figure>
+                <span class="badge badge-live">Live</span>
+                <h4>Jasmine Solei Creative Experiences</h4>
+                <p>Next.js site for a mixed-media artist and creative-wellness guide. Her own portfolio is kept separate from participant galleries, wellness language stays non-clinical, and performance is monitored with Vercel Speed Insights.</p>
+                <p class="case-touch"><strong>Built for the trade:</strong> a quiet, gallery-first layout where the art leads and motion stays understated.</p>
+                <a class="text-link" href="https://jasminesoleicreations.com/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
-    </header>
+    </section>
 
-    <main id="main-content">
+    <!-- SYSTEMS -->
+    <section class="section" id="systems" aria-labelledby="systems-title">
+      <div class="container">
+        <div class="section-heading split" data-motion="rise-sm">
+          <div>
+            <p class="eyebrow">Systems</p>
+            <h2 id="systems-title">How the work actually gets done: real workflows, each step clickable.</h2>
+          </div>
+          <p class="section-intro">AI is how I scale my output. Every system below has a human checkpoint, a way to catch failures, and a rule for when to stop.</p>
+        </div>
 
-      <!-- HERO -->
-      <section class="hero section" id="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy" data-motion-group>
-            <p class="eyebrow" data-motion="rise-sm">West Palm Beach, Florida · AI-first operator</p>
-            <h1 data-motion="rise">
-              I build premium websites, smarter search systems, and digital infrastructure
-              that actually pulls its weight.
-            </h1>
-            <p class="hero-lead" data-motion="rise-sm">
-              I’m Mike Lynch — founder of 9R Designs and SEO Tier 1, with a background spanning
-              web content strategy, UX, SEO, creative execution, and AI-led workflow design.
-            </p>
-
-            <div class="hero-meta" role="list" aria-label="Core value points" data-motion="fade">
-              <span role="listitem">Perplexity-led orchestration</span>
-              <span role="listitem">Design + SEO + AI systems</span>
-              <span role="listitem">Built for hiring and client acquisition</span>
-            </div>
-
-            <div class="hero-cta" data-motion="rise-sm">
-              <a class="button button-primary" href="#work">View Selected Work</a>
-              <a class="button button-secondary" href="#experience">See Experience</a>
-            </div>
+        <div class="explorer" data-explorer data-motion="rise">
+          <div class="explorer-tabs" role="tablist" aria-label="Workflow examples">
+            <button type="button" role="tab" aria-selected="true" data-wf="migration">Store migration</button>
+            <button type="button" role="tab" aria-selected="false" data-wf="images">Image SEO pipeline</button>
+            <button type="button" role="tab" aria-selected="false" data-wf="leads">Lead attribution</button>
+            <button type="button" role="tab" aria-selected="false" data-wf="reports">Monthly reporting</button>
           </div>
 
-          <aside class="hero-card" aria-label="Professional snapshot" data-motion="right" data-motion-delay="3">
-            <div class="hero-card-panel">
-              <p class="mini-label">Current focus</p>
-              <ul class="snapshot-list" role="list">
-                <li>Founder, 9R Designs / SEO Tier 1</li>
-                <li>AI-first web design and search strategy</li>
-                <li>Technical SEO, UX, content systems, GEO/AEO</li>
-                <li>Modern front-end direction without bloated bs</li>
+          <div class="explorer-stage">
+            <ol class="wf-steps" role="list" data-wf-steps></ol>
+            <div class="wf-detail" aria-live="polite">
+              <p class="wf-tool" data-wf-tool></p>
+              <h3 data-wf-title></h3>
+              <p data-wf-body></p>
+              <div class="wf-gate"><span>Checkpoint</span><p data-wf-gate></p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="principles" data-motion-group>
+          <div class="principle" data-motion="rise"><h3>Google Search Central first</h3><p>Every SEO decision starts from Google’s documented guidance, not from tactics that worked once.</p></div>
+          <div class="principle" data-motion="rise"><h3>A preview isn’t a launch</h3><p>A passing preview build doesn’t mean the site is live. I count something as launched only after checking the real domain, confirming a test lead arrives, and seeing Search Console accept the sitemap.</p></div>
+          <div class="principle" data-motion="rise"><h3>Secrets stay server-side</h3><p>No credentials or customer data in front-end code. Integrations run through server functions.</p></div>
+          <div class="principle" data-motion="rise"><h3>No invented claims</h3><p>Every certification, testimonial, or result has a source, or it doesn’t ship. That applies to client sites and to this one.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-heading" data-motion="rise-sm">
+          <p class="eyebrow">Experience</p>
+          <h2 id="exp-title">Seven years in e-commerce, plus enough small-business ownership to know what matters.</h2>
+        </div>
+
+        <div class="timeline" data-motion-group>
+          <article class="timeline-item" data-motion="rise">
+            <p class="timeline-date">Sept 2025 – Present</p>
+            <div class="timeline-body">
+              <h3>Founder · 9R Designs &amp; SEO Tier 1</h3>
+              <p class="timeline-sub">West Palm Beach, FL · Web design, SEO/AEO/GEO, e-commerce, automation</p>
+              <ul role="list">
+                <li>Lead strategy, design, SEO architecture, and delivery for clients in home services, childcare, motorcycle e-commerce, brokerage, industrial, and creative work.</li>
+                <li>Took a new electrician site to page one for Gwinnett County terms within about 100 days, and grew Gatti’s Garage monthly Google clicks about 4× (April to July 2026).</li>
+                <li>Built reusable systems for SEO audits, keyword and content planning, image SEO, lead attribution, and draft-only monthly reporting.</li>
+                <li>Direct builds in Figma Make, Next.js, React/Vite, Shopify/Liquid, Supabase, Make.com, and Python, using AI pair-programming that I review before shipping.</li>
               </ul>
             </div>
+          </article>
 
-            <div class="hero-card-panel">
-              <p class="mini-label">Client lanes</p>
-              <ul class="snapshot-tags" role="list">
-                <li>Moto / eCommerce</li>
-                <li>Daycare / preschool</li>
-                <li>Local service</li>
-                <li>Alternative brands</li>
+          <article class="timeline-item" data-motion="rise">
+            <p class="timeline-date">2023 – Sept 2025</p>
+            <div class="timeline-body">
+              <h3>Web Content Strategist · Greenlane</h3>
+              <p class="timeline-sub">Boca Raton, FL · Multi-brand e-commerce portfolio</p>
+              <ul role="list">
+                <li>Led web content strategy, SEO, CRO, and AI-search visibility across Vapor.com, HigherStandards.com, PuffItUp.com, Haring Glass, and Wholesale.Greenlane.com.</li>
+                <li>Helped lift conversion from 1% to 3% in about three months, and contributed to revenue growth of up to 37%, through product content, landing-page structure, and UX paths.</li>
+                <li>Got brands among the first in the vape category to appear in ChatGPT, Gemini, and featured snippets, using early AEO/GEO techniques.</li>
+                <li>Managed metadata, product and category content, and workflows across the PIM and e-commerce platforms.</li>
               </ul>
             </div>
-          </aside>
-        </div>
-      </section>
+          </article>
 
-      <!-- ABOUT -->
-      <section class="section section-dark" id="about">
-        <div class="container section-grid">
-          <div class="section-heading" data-motion="rise-sm">
-            <p class="eyebrow">About</p>
-            <h2>Built from real work, not AI cosplay.</h2>
-          </div>
-
-          <div class="section-content" data-motion="rise" data-motion-delay="2">
-            <p>
-              I’m a South Florida native, husband, father of three, and founder who built 9R Designs
-              to serve businesses that were getting ignored, overcharged, or handed pretty sites that
-              never ranked. My lane is simple: design, SEO, UX, and AI systems that create visibility,
-              trust, and revenue.
-            </p>
-            <p>
-              I don’t treat AI like a party trick. I use it as an operating layer — especially through
-              Perplexity — to accelerate research, content systems, decision-making, and execution
-              without losing strategic control.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section class="section" id="experience">
-        <div class="container">
-          <div class="section-heading" data-motion="rise-sm">
-            <p class="eyebrow">Experience</p>
-            <h2>Work history with actual range.</h2>
-          </div>
-
-          <div class="timeline" data-motion-group>
-            <article class="timeline-item" data-motion="rise">
-              <div class="timeline-meta">
-                <span class="timeline-date">Sept 2025 – Present</span>
-              </div>
-              <div class="timeline-body">
-                <h3>Founder · 9R Designs / SEO Tier 1</h3>
-                <p>
-                  Running AI-first web design, SEO, automation, and search visibility systems for
-                  service businesses, ecommerce brands, and niche operators.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-motion="rise">
-              <div class="timeline-meta">
-                <span class="timeline-date">Jan 2018 – Sept 2025</span>
-              </div>
-              <div class="timeline-body">
-                <h3>Web Content Strategist & AI Specialist · Greenlane Holdings</h3>
-                <p>
-                  Led web content strategy, ecommerce support, UX thinking, merchandising, and AI-aided
-                  workflow improvements across a fast-moving digital retail environment.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-motion="rise">
-              <div class="timeline-meta">
-                <span class="timeline-date">2015 – 2018</span>
-              </div>
-              <div class="timeline-body">
-                <h3>General Manager · 3 Layers Deep Tattoo</h3>
-                <p>
-                  Managed operations, customer experience, scheduling, and day-to-day business execution
-                  in a real-world creative business environment.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-motion="rise">
-              <div class="timeline-meta">
-                <span class="timeline-date">2013 – 2015</span>
-              </div>
-              <div class="timeline-body">
-                <h3>Stay-at-Home Parent</h3>
-                <p>
-                  Full-time family leadership, logistics, and household operations — not filler, real life,
-                  real responsibility.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item" data-motion="rise">
-              <div class="timeline-meta">
-                <span class="timeline-date">2011 – 2014</span>
-              </div>
-              <div class="timeline-body">
-                <h3>School Investment Properties</h3>
-                <p>
-                  Early exposure to childcare and education-adjacent business operations that still informs
-                  my vertical focus today.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- WORK -->
-      <section class="section section-dark" id="work">
-        <div class="container">
-          <div class="section-heading" data-motion="rise-sm">
-            <p class="eyebrow">Selected work</p>
-            <h2>Live projects, real businesses, no fake case-study theater.</h2>
-          </div>
-
-          <div class="work-grid" data-motion-group>
-            <article class="work-card" data-motion="rise">
-              <p class="work-type">Tradesman</p>
-              <h3>TFW Electric</h3>
-              <p>Custom build for a service business that needed a stronger digital front door.</p>
-              <a href="https://www.tfw-electric.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
-            </article>
-
-            <article class="work-card" data-motion="rise">
-              <p class="work-type">Moto / Ecommerce</p>
-              <h3>Gattis Garage</h3>
-              <p>Performance-focused motorcycle brand work tied to rebuild strategy and SEO lift.</p>
-              <a href="https://www.gattisgarage.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
-            </article>
-
-            <article class="work-card" data-motion="rise">
-              <p class="work-type">Lifestyle</p>
-              <h3>Toxin Free Approach</h3>
-              <p>Clean health-forward presentation with trust, clarity, and conversion in mind.</p>
-              <a href="https://toxinfreeapproach.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
-            </article>
-
-            <article class="work-card" data-motion="rise">
-              <p class="work-type">School</p>
-              <h3>First Impressions Schools</h3>
-              <p>Multi-location childcare site positioned around local trust, VPK, and parent decision flow.</p>
-              <a href="https://www.firstimpressionsschools.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
-            </article>
-
-            <article class="work-card" data-motion="rise">
-              <p class="work-type">Tradesman</p>
-              <h3>All Out AC</h3>
-              <p>Ongoing build, maintenance, and SEO support for a local service business.</p>
-              <a href="https://www.alloutac.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
-            </article>
-
-            <article class="work-card" data-motion="rise">
-              <p class="work-type">Real Estate Broker</p>
-              <h3>School Investment Properties</h3>
-              <p>Maintenance and SEO support in a specialized childcare real estate lane.</p>
-              <a href="https://www.childcaresales.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section class="section" id="skills">
-        <div class="container section-grid">
-          <div class="section-heading" data-motion="rise-sm">
-            <p class="eyebrow">Skills / Stack</p>
-            <h2>Strategy-first, AI-led, execution-aware.</h2>
-          </div>
-
-          <div class="section-content">
-            <div class="skill-clusters" data-motion-group>
-              <article class="skill-card" data-motion="rise">
-                <h3>Core strengths</h3>
-                <ul role="list">
-                  <li>Technical SEO / AEO / GEO</li>
-                  <li>UX and conversion-minded design</li>
-                  <li>Content systems and information architecture</li>
-                  <li>Prompt engineering and AI orchestration</li>
-                </ul>
-              </article>
-
-              <article class="skill-card" data-motion="rise">
-                <h3>Platform direction</h3>
-                <ul role="list">
-                  <li>Shopify / Liquid</li>
-                  <li>Next.js</li>
-                  <li>Supabase</li>
-                  <li>Make.com / Mailchimp</li>
-                </ul>
-              </article>
-
-              <article class="skill-card" data-motion="rise">
-                <h3>Working style</h3>
-                <ul role="list">
-                  <li>Design system thinking</li>
-                  <li>AI-assisted production workflows</li>
-                  <li>Fast iteration with strong copy control</li>
-                  <li>Built to ship, not just brainstorm</li>
-                </ul>
-              </article>
+          <article class="timeline-item" data-motion="rise">
+            <p class="timeline-date">2018 – 2023</p>
+            <div class="timeline-body">
+              <h3>Customer Service Supervisor · Sales Coordinator · CSR · Greenlane</h3>
+              <p class="timeline-sub">Promoted through operations into the web team</p>
+              <ul role="list">
+                <li>Supported e-commerce operations, reporting, sandbox testing, and platform integrations across Microsoft D365, Shopify, Magento, BigCommerce, Ordoro, and NetSuite.</li>
+                <li>Ran a one-person support function across multiple platforms, which gave me a working understanding of where online stores fail.</li>
+              </ul>
             </div>
-          </div>
+          </article>
+
+          <article class="timeline-item" data-motion="rise">
+            <p class="timeline-date">2015 – 2018</p>
+            <div class="timeline-body">
+              <h3>General Manager · 3 Layers Deep Tattoo &amp; Piercing</h3>
+              <p class="timeline-sub">Coral Springs, FL</p>
+              <ul role="list">
+                <li>Ran daily operations: hiring, scheduling, training, supply chain, compliance and licensing, and the studio’s website and online presence.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-motion="rise">
+            <p class="timeline-date">2011 – 2014</p>
+            <div class="timeline-body">
+              <h3>Commercial Real Estate Agent · School Investment Properties</h3>
+              <p class="timeline-sub">Palm Beach Gardens, FL</p>
+              <ul role="list">
+                <li>Worked on business valuations, transactions, and due diligence for childcare businesses. I’m now rebuilding the same firm’s website.</li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- WORKFLOW -->
-      <section class="section section-dark" id="workflow">
-        <div class="container section-grid">
-          <div class="section-heading" data-motion="rise-sm">
-            <p class="eyebrow">AI workflow</p>
-            <h2>Perplexity is the hub, not a checkbox tool.</h2>
-          </div>
-
-          <div class="section-content" data-motion="rise" data-motion-delay="2">
-            <p>
-              My workflow is built around Perplexity as the primary research, synthesis, and orchestration
-              layer. It helps me structure decisions faster, pressure-test strategy, map search intent,
-              and move from messy thinking to useful output without burning hours.
-            </p>
-            <p>
-              From there, I push execution through tools like Figma Make, VS Code with Claude, and other
-              production systems when code or deployment is required. The point is not “using AI.” The point
-              is building a smarter operating system around the work.
-            </p>
-          </div>
+    <!-- CAPABILITIES -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading" data-motion="rise-sm">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="skills-title">Organized by the business problem each one solves.</h2>
         </div>
-      </section>
+        <div class="cap-grid" data-motion-group>
+          <article class="cap" data-motion="rise" data-lens-tags="seo">
+            <h3>Get found</h3>
+            <p>Technical &amp; local SEO · AEO / GEO · schema &amp; structured data · Search Console &amp; GA4 · Google Business Profile · content architecture</p>
+          </article>
+          <article class="cap" data-motion="rise" data-lens-tags="ecom">
+            <h3>Convert &amp; sell</h3>
+            <p>Shopify / Liquid · BigCartel · BigCommerce · Magento · CRO · catalog &amp; PIM · merchandising · checkout, tax &amp; redirect QA</p>
+          </article>
+          <article class="cap" data-motion="rise" data-lens-tags="seo ecom">
+            <h3>Design &amp; ship</h3>
+            <p>UX &amp; information architecture · Figma / Figma Make · Next.js · React + Vite · motion design · GitHub · Vercel / Netlify · DNS cutovers</p>
+          </article>
+          <article class="cap" data-motion="rise" data-lens-tags="ai">
+            <h3>Automate</h3>
+            <p>AI orchestration (Perplexity, Claude, Gemini) · Python · Make.com · Supabase · GoHighLevel · Mailchimp · human-review workflows</p>
+          </article>
+        </div>
+        <p class="honest-note" data-motion="fade">To be clear about how I work: I architect, direct, and review the code. AI pair-programmers write much of it. I know where these stacks fail silently, and I check those places before anything goes live.</p>
+      </div>
+    </section>
 
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <div class="container contact-panel" data-motion="rise">
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel" data-motion="rise">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>Open to the right role, the right client, or the right build.</h2>
-            <p>
-              If you need someone who can bridge design, SEO, AI workflows, and business reality without
-              sounding like a LinkedIn hallucination, we should talk.
-            </p>
+            <h2 id="contact-title">Looking for someone to own SEO, e-commerce growth, or the AI systems behind them?</h2>
+            <p>I’m looking for senior remote roles in SEO and AEO leadership, e-commerce growth, and AI and automation strategy. Teams that care about measurable results and shipping get the best out of me.</p>
           </div>
-
           <div class="contact-actions">
-            <a class="button button-primary" href="mailto:anonymouslynch@gmail.com">Email Mike</a>
-            <a
-              class="button button-secondary"
-              href="https://9rdesigns.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit 9R Designs
-            </a>
-            <a
-              class="button button-ghost"
-              href="https://www.linkedin.com/in/michael-lynch-08b52375"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
+            <a class="button button-primary" href="mailto:anonymouslynch@gmail.com?subject=Let%E2%80%99s%20talk%20%E2%80%94%20from%20your%20portfolio">Email Mike</a>
+            <a class="button button-secondary" href="assets/Mike-Lynch-Resume.pdf" download>Download résumé (PDF)</a>
+            <a class="button button-ghost" href="https://www.linkedin.com/in/michael-lynch-08b52375" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a class="button button-ghost" href="https://9rdesigns.com/" target="_blank" rel="noopener noreferrer">9R Designs ↗</a>
           </div>
         </div>
-      </section>
-
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Mike Lynch · West Palm Beach, Florida</p>
-        <a href="#hero">Back to top</a>
       </div>
-    </footer>
-  </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Mike Lynch · West Palm Beach, Florida · Remote-ready</p>
+      <p class="footer-build">Hand-built in plain HTML, CSS, and JS. No framework, respects reduced motion. <a href="https://github.com/anonymous9r/mike-lynch-site" target="_blank" rel="noopener noreferrer">View the source ↗</a></p>
+      <a href="#hero">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- CASE FILE DRAWERS -->
+  <dialog class="drawer" id="drawer-tfw" aria-labelledby="drawer-tfw-title">
+    <div class="drawer-inner">
+      <header class="drawer-head">
+        <p class="eyebrow">Case file · 01</p>
+        <h2 id="drawer-tfw-title">TFW Electric: the diagnosis</h2>
+        <button class="drawer-close" type="button" data-drawer-close aria-label="Close case file">✕</button>
+      </header>
+      <div class="drawer-body">
+        <h3>What Search Console showed</h3>
+        <p>The live <code>privacy-policy</code> URL was flagged as <code>noindex</code>, but the Figma Make source had no noindex anywhere. Two causes: an older deployment was still being served, and a React SEO component was rewriting robots metadata after the page loaded. Google indexes from the initial HTML, so the JavaScript change came too late.</p>
+        <h3>The fix, in order</h3>
+        <ol>
+          <li>Moved robots and canonical tags into the static <code>index.html</code> head and confirmed them in the raw HTML response, not the rendered page.</li>
+          <li>Consolidated on one canonical host so Google stopped splitting signals between www and non-www.</li>
+          <li>Shipped <code>robots.txt</code> and a real XML sitemap covering every route.</li>
+          <li>Added Electrician / LocalBusiness schema: Georgia Class II license, owner, phone, 20+ years, and services (panel upgrades, EV chargers, generator transfer switches, rewiring, surge protection).</li>
+          <li>Wrote county-level service copy for the way people actually search for an electrician in Gwinnett.</li>
+          <li>Submitted the sitemap and requested indexing for the core pages.</li>
+        </ol>
+        <h3>Search Console snapshot</h3>
+        <table class="data-table">
+          <thead><tr><th scope="col">Query</th><th scope="col">Impr.</th><th scope="col">Avg. pos.</th></tr></thead>
+          <tbody>
+            <tr><td>best electricians for panel upgrades in gwinnett county</td><td>7</td><td>2.4</td></tr>
+            <tr><td>electrical contractor gwinnett county ga</td><td>22</td><td>3.2</td></tr>
+            <tr><td>electrician gwinnett county</td><td>53</td><td>4.2</td></tr>
+            <tr><td>electrician gwinnett county ga</td><td>38</td><td>4.8</td></tr>
+            <tr><td>gwinnett electrician</td><td>10</td><td>7.6</td></tr>
+            <tr><td>electrician lawrenceville ga</td><td>29</td><td>8.0</td></tr>
+            <tr><td>electrical rewiring gwinnett ga</td><td>50</td><td>8.1</td></tr>
+          </tbody>
+        </table>
+        <p class="fine-print">Google Search Console, sc-domain:tfw-electric.com, Jul 9 – Oct 22, 2026. Search volume is small and early. I’m sharing this because of how fast the site ranked, not because of traffic volume yet.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="drawer" id="drawer-gattis" aria-labelledby="drawer-gattis-title">
+    <div class="drawer-inner">
+      <header class="drawer-head">
+        <p class="eyebrow">Case file · 02</p>
+        <h2 id="drawer-gattis-title">Gatti’s Garage: the migration rules</h2>
+        <button class="drawer-close" type="button" data-drawer-close aria-label="Close case file">✕</button>
+      </header>
+      <div class="drawer-body">
+        <figure class="drawer-fig">
+          <img src="assets/img/work/bigcartel.webp" width="1200" height="750" loading="lazy" alt="The current Gatti’s Garage BigCartel storefront" />
+          <figcaption>The current BigCartel storefront: still the source of truth for products and prices until the Shopify cutover.</figcaption>
+        </figure>
+        <h3>Why it’s more than a CSV upload</h3>
+        <p>A migration fails quietly. Duplicated orders, customers getting surprise receipt emails, or historical lines linked to the wrong product are all easy to miss. So the pipeline runs on rules, not guesswork:</p>
+        <ul>
+          <li><strong>Keep order identity:</strong> existing history uses a <code>#bcgg-</code> prefix, and Matrixify matches exact order names, so dropping the prefix would create duplicates.</li>
+          <li><strong>Import quietly:</strong> receipts and staff notifications off, inventory bypassed, malformed phone numbers blanked, partial shipments held for manual review.</li>
+          <li><strong>Link products conservatively:</strong> products are linked only on a confident SKU or handle match. Anything uncertain becomes a tagged custom item.</li>
+          <li><strong>Customers before orders:</strong> 258 missing customers are imported first so historical orders attach to real customer records.</li>
+          <li><strong>Reject bad inputs:</strong> a two-byte blank export was caught and blocked before it could touch Shopify.</li>
+        </ul>
+        <h3>The numbers</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th scope="row">Historical orders mapped</th><td>1,445 · $195,686.45</td></tr>
+            <tr><th scope="row">Matrixify rows generated</th><td>7,020</td></tr>
+            <tr><th scope="row">Product master</th><td>366 products · 1,925 rows · 57 columns</td></tr>
+            <tr><th scope="row">Final delta batch</th><td>861 orders · 1,317 line items · 0 mismatches</td></tr>
+            <tr><th scope="row">Redirects verified</th><td>10</td></tr>
+          </tbody>
+        </table>
+        <h3>Design details</h3>
+        <p>A “Shop by Part” navigator modeled on an OEM microfiche diagram, with mechanical hotspots, because riders look up parts the way they look them up in a service manual. On the brand site, the “Built to Be Ridden” editorial feature turns a vendor article into rider-first content, with sponsored links marked <code>rel="sponsored nofollow"</code>.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="drawer" id="drawer-childcare" aria-labelledby="drawer-childcare-title">
+    <div class="drawer-inner">
+      <header class="drawer-head">
+        <p class="eyebrow">Case file · 03</p>
+        <h2 id="drawer-childcare-title">Childcare: the enrollment playbook</h2>
+        <button class="drawer-close" type="button" data-drawer-close aria-label="Close case file">✕</button>
+      </header>
+      <div class="drawer-body">
+        <figure class="drawer-fig">
+          <img src="assets/img/work/fis.webp" width="1200" height="750" loading="lazy" alt="First Impressions Schools homepage: Preschool and Summer Camp in Boynton Beach and Lake Worth" />
+          <figcaption>First Impressions Schools: four campuses, one site, with VPK given its own landing page.</figcaption>
+        </figure>
+        <h3>The repeatable pattern</h3>
+        <ol>
+          <li><strong>Find the gap in Search Console.</strong> High impressions with almost no clicks means a page is close to ranking but losing on relevance or CTR.</li>
+          <li><strong>Own the questions competitors skip.</strong> Free VPK eligibility, application steps, and after-school pickup at specific elementary schools.</li>
+          <li><strong>Make trust visible.</strong> Ratios, licensing, safety practices, director names, and real classroom photos replacing AI placeholders.</li>
+          <li><strong>Get every lead into one tracked form.</strong> Same form everywhere, hidden attribution fields, and GA4 events that fire once per action.</li>
+          <li><strong>Report honestly.</strong> Compare equal periods and separate branded from non-branded traffic. A baseline is not a growth claim.</li>
+        </ol>
+        <figure class="drawer-fig">
+          <img src="assets/img/work/fip.webp" width="1200" height="750" loading="lazy" alt="First Impressions of Rockledge homepage: A Preschool in Rockledge Where Families Feel at Home" />
+          <figcaption>Rockledge rebuild: launched with a DNS cutover that left the client’s email records untouched.</figcaption>
+        </figure>
+        <h3>Search Console snapshot</h3>
+        <table class="data-table">
+          <thead><tr><th scope="col">Property</th><th scope="col">Clicks</th><th scope="col">Impr.</th><th scope="col">Since</th></tr></thead>
+          <tbody>
+            <tr><td>firstimpressionsschools.com</td><td>1,592</td><td>65,804</td><td>Jan 22, 2026</td></tr>
+            <tr><td>academylittleachievers.com</td><td>711</td><td>18,902</td><td>Apr 22, 2026</td></tr>
+            <tr><td>firstimpressionspreschool.com</td><td>224</td><td>5,155</td><td>Jul 21, 2026</td></tr>
+          </tbody>
+        </table>
+        <p class="fine-print">Through Oct 22, 2026. Start dates are when each property began reporting. ALA’s enrollment outcome is reported by the owner and is not attributed to SEO alone.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><style>[data-motion]{opacity:1!important;transform:none!important}</style></noscript>
 </body>
 </html>
