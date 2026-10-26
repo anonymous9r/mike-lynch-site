@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Mike Lynch | Theme Preview</title><style>html,body{margin:0;height:100%;background:#101318}iframe{display:block;width:100%;height:100dvh;border:0;opacity:0}iframe.ready{opacity:1}#status{position:absolute;inset:0;display:grid;place-items:center;color:#f2f5f9;font:16px system-ui}</style></head><body><div id="status" role="status">Loading theme preview…</div><iframe id="preview" title="Portfolio color theme preview"></iframe><script>
+const css = `
+:root,[data-theme="light"]{
+--color-bg:#f5f7fa;--color-bg-alt:#eaf0f6;--color-surface:#ffffff;--color-surface-2:#f8faff;--color-surface-offset:#dce5ef;
+--color-border:rgba(23,33,46,.16);--color-divider:rgba(23,33,46,.10);
+--color-text:#17212e;--color-text-muted:#526174;--color-text-faint:#59687a;--color-text-inverse:#ffffff;
+--color-primary:#1d4ed8;--color-primary-hover:#1e40af;--color-primary-soft:rgba(29,78,216,.07);--color-primary-strong:rgba(29,78,216,.18);
+--color-on-primary:#ffffff;--color-electric:#036b89;--color-good:#216c44;--grid-line:rgba(23,33,46,.045);
+--shadow-sm:0 6px 18px rgba(15,23,42,.05);--shadow-md:0 16px 40px rgba(15,23,42,.09);--shadow-lg:0 28px 70px rgba(15,23,42,.13);color-scheme:light}
+[data-theme="dark"]{
+--color-bg:#101318;--color-bg-alt:#131820;--color-surface:#171c24;--color-surface-2:#202834;--color-surface-offset:#2c3746;
+--color-border:rgba(181,192,206,.20);--color-divider:rgba(181,192,206,.12);
+--color-text:#f2f5f9;--color-text-muted:#b5c0ce;--color-text-faint:#a5b3c5;--color-text-inverse:#101318;
+--color-primary:#68c7ff;--color-primary-hover:#9bdcff;--color-primary-soft:rgba(104,199,255,.09);--color-primary-strong:rgba(104,199,255,.20);
+--color-on-primary:#101318;--color-electric:#63e6f5;--color-good:#7ad8a2;--grid-line:rgba(181,192,206,.045);
+--shadow-sm:0 10px 30px rgba(0,0,0,.25);--shadow-md:0 18px 48px rgba(0,0,0,.35);--shadow-lg:0 30px 80px rgba(0,0,0,.5);color-scheme:dark}
+::selection,.skip-link,.brand-mark,.button-primary,.lens-switch button[aria-checked="true"],.wf-steps button[aria-pressed="true"] .n{color:var(--color-on-primary)}
+.console-dots i:first-child{background:var(--color-electric)}
+.hero::after{opacity:.6}
+.site-nav a.is-active{text-decoration:underline;text-underline-offset:.3em;text-decoration-color:var(--color-primary)}
+`;
+const frame=document.getElementById('preview');
+frame.addEventListener('load',()=>{try{const doc=frame.contentDocument;if(!doc||!doc.head)throw new Error('Preview document unavailable');const style=doc.createElement('style');style.id='graphite-sky-preview';style.textContent=css;doc.head.appendChild(style);const robots=doc.createElement('meta');robots.name='robots';robots.content='noindex,nofollow';doc.head.appendChild(robots);frame.classList.add('ready');document.getElementById('status').remove()}catch(error){document.getElementById('status').textContent='Preview could not load. Please reload this page.';console.error(error)}});
+frame.src='./index.html'+location.search+location.hash;
+</script></body></html>
