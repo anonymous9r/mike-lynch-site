@@ -165,7 +165,7 @@
     range.addEventListener("keydown", () => (wrap.dataset.touched = "1"));
   });
 
-  /* ---------- Architecture tabs (Gatti's) ---------- */
+  /* ---------- Architecture tabs (motorcycle shop) ---------- */
   document.querySelectorAll("[data-arch]").forEach((arch) => {
     const tabs = arch.querySelectorAll("[data-arch-tab]");
     tabs.forEach((tab) => tab.addEventListener("click", () => {
